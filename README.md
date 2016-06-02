@@ -2,6 +2,8 @@
 
 ### FB Bot Framework
 
+參考 [FB Messenger Platform](https://developers.facebook.com/docs/messenger-platform/implementation#send_message)
+
 ### 功能類別
 
 1. Web Plugins
@@ -52,3 +54,62 @@
  FB會持續提供更多項目，讓顧客可以透過對話與店家互動
  
   ![User Controls ](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12057143_198218393902993_755928037_n.png)
+  
+  
+  
+  
+  
+### 發送訊息
+
+- Text and Image Messages
+單純文字或圖片
+  
+![Text and Image Messages ](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12532937_1707565839531937_1916590448_n.png)
+
+- Structured Messages
+結構化選項與圖文，同時裡面可以加上call-to-action或者是open URL
+   
+![Structured Messages 1](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12679454_228093174215421_635988637_n.png)
+
+![Structured Messages 2](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12995563_1711733995711442_1886079481_n.png)
+  
+- Inbox vs Message Requests
+可以讓訊息出現在inbox或者是Message Request提醒顧客
+  
+![Inbox vs Message Requests](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12601315_1703870573235346_288847799_n.png)
+
+
+### Send/Receive API (訊息收發API)
+
+- User IDs
+一旦拿到**pages_messaging**的權限，，就能透過顧客的user_id發送訊息給他們，但這個id是根據專頁走的，並不是顧客真的的Facebook id,所以如果真的需要連結兩邊，需要自己在透過一些額外的手法進行連結
+
+- Phone Numbers (Customer Matching)
+一旦拿到 **pages_messaging_phone_number**，就能利用他們的電話號碼發送訊息給他們,而這個權限就不一定需要顧客要有第一次的與我們的facebook專頁互動就能直接發送訊息給他們,主動性更強!
+但除非他們願意與這個專頁的bot開啟第一次互動，不然一樣都無法拿到顧客的相關資訊．
+此外這個功能必須專頁要是在美國或者是有一個管理者是在美國
+
+- Request
+
+    - Text and Image Messages
+    - Structured Messages
+      - Button Template
+      - Generic Template, including imsage, title,subtitle, description, and buttons.
+      - Receipt Template
+
+- Response
+    
+    - recipient_id 專頁id
+    - message_id 訊息id
+    
+- Delivery Receipts
+透過Rest回傳資訊可以知道訊息已經發送了，但一定要有** message_deliveries**權限
+
+- Postback Callbacks
+透過**messaging_postbacks**權限，可以讓顧客點擊具有回送特定訊息的按鈕後，把該訊息提供給bot
+
+- Welcome Screen (給第一次與專頁溝通使用）
+- Messenger Greeting (每次開啟與顧客溝通使用)
+- User Profile API
+參考
+     https://graph.facebook.com/v2.6/<USER_ID>?fields=first_name,last_name,profile_pic,locale,timezone,gender&access_token=<PAGE_ACCESS_TOKEN>
