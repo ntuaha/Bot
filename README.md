@@ -29,4 +29,26 @@
  
  
   ![Messenger Codes and Links](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/12963404_1296845976998228_789563813989987883_n.jpg?oh=9fab596c5feb490807fa5bda9a2990c6&oe=57DCEFE9)
+  
+  
+  ### Features in a Conversation
+  
+  1. *Welcome Screen (歡迎畫面)
+  當顧客第一次來到這個粉絲專頁Messager會看見的話, 與Bot無關，就只是設定．但這是審核必有的項目 
+  
+    ![Welcome Screen](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12995546_473451206187753_917419200_n.png)
+    
+  
+  2. Structured Templates 結構化對話
+  
+  有許多種對話方式, 有簡單回話,圖文,圖文加單一按鈕,有回傳測定參數多按鈕(call-to-action)
+  
+   ![Structured Templates 1](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12679454_1026083487461743_881543663_n.png)
  
+ ![Structured Templates ](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12995543_192638781122814_2026367341_n.png)
+ 
+ 3. User Controls (使用者控制項)
+ 
+ FB會持續提供更多項目，讓顧客可以透過對話與店家互動
+ 
+  ![User Controls ](https://scontent-tpe1-1.xx.fbcdn.net/t39.2178-6/12057143_198218393902993_755928037_n.png)
